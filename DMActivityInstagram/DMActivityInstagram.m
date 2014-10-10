@@ -19,7 +19,7 @@
 }
 
 - (UIImage *)activityImage {
-    return [UIImage imageNamed:@"instagram.png"];
+    return [UIImage imageNamed: iOS8 ? @"instagram_activity_ios8" : @"instagram"];
 }
 
 
@@ -126,6 +126,8 @@
     return (imageSize.height == imageSize.width);
 }
 
-
++(UIActivityCategory)activityCategory{
+    return UIActivityCategoryShare;
+}
 
 @end
